@@ -13,7 +13,7 @@ export function Header() {
           Data Viz
         </Link>
       </div>
-      <Link href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+      <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
         <Button variant="secondary" className="bg-red-700 hover:bg-red-600 text-white">
           Resume
         </Button>
