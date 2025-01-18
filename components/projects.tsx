@@ -41,12 +41,12 @@ const projects: Project[] = [
 
 export function Projects() {
   return (
-    <div className="py-16 px-6">
-      <section id="data-analyst-projects" className="max-w-6xl mx-auto mb-16">
-        <h2 className="text-3xl font-bold text-center mb-12 text-red-900">
+    <div className="py-8 sm:py-16 px-4 sm:px-6">
+      <section id="data-analyst-projects" className="max-w-6xl mx-auto mb-8 sm:mb-16">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-12 text-red-900">
           Data Analyst Projects
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {projects
             .filter(project => project.category === "analysis")
             .map(project => (
@@ -56,10 +56,10 @@ export function Projects() {
       </section>
 
       <section id="data-visualization" className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-red-900">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-12 text-red-900">
           Data Viz
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {projects
             .filter(project => project.category === "visualization")
             .map(project => (
@@ -75,14 +75,14 @@ function ProjectCard({ project }: { project: Project }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <Link href={project.link}>
+    <Link href={project.link} target="_blank" rel="noopener noreferrer">
       <Card 
-        className="overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg bg-white"
+        className="overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg bg-white h-full"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <CardContent className="p-0 relative">
-          <div className="relative h-48">
+        <CardContent className="p-0 relative h-full flex flex-col">
+          <div className="relative h-40 sm:h-48 flex-shrink-0">
             <Image
               src={project.image || "/placeholder.svg"}
               alt={project.title}
@@ -90,13 +90,13 @@ function ProjectCard({ project }: { project: Project }) {
               className="object-contain"
             />
             {isHovered && (
-              <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
-                <p className="text-white text-center">{project.description}</p>
+              <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center p-2 sm:p-4">
+                <p className="text-white text-center text-sm sm:text-base">{project.description}</p>
               </div>
             )}
           </div>
-          <div className="p-4">
-            <h3 className="text-lg font-semibold text-red-900 text-center">
+          <div className="p-3 sm:p-4 flex-grow flex items-center justify-center">
+            <h3 className="text-base sm:text-lg font-semibold text-red-900 text-center">
               {project.title}
             </h3>
           </div>
