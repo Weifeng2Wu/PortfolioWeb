@@ -15,51 +15,27 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Sales Analysis Dashboard",
-    image: "/sales-dashboard.jpg", // Update with your image path
-    link: "#",
+    title: "E-commerce Data Analyst",
+    image: "/E-Commmerce.png", // Update with your image path
+    link: "https://github.com/Weifeng2Wu/E-Commerce/blob/master/User_Analyse.ipynb",
     category: "analysis",
-    description: "Interactive dashboard showcasing key sales metrics and trends."
+    description: " Analyzed 1,000,000+ user transactions using Python and matplotlib, examining key metrics including purchase frequency, preferences, and payment methods to drive GMV growth"
   },
   {
     id: 2,
-    title: "Customer Segmentation",
-    image: "/customer-segmentation.jpg", // Update with your image path
-    link: "#",
-    category: "analysis",
-    description: "Analysis of customer groups based on purchasing behavior and demographics."
-  },
-  {
-    id: 3,
-    title: "Predictive Analytics",
-    image: "/predictive-analytics.jpg", // Update with your image path
-    link: "#",
-    category: "analysis",
-    description: "Forecasting future trends using machine learning algorithms."
-  },
-  {
-    id: 4,
-    title: "Interactive Data Visualization",
-    image: "/interactive-visualization.jpg", // Update with your image path
-    link: "#",
+    title: "Interactive Sales Dashboard",
+    image: "/Sales-Dashboard.png", // Update with your image path
+    link: "https://public.tableau.com/app/profile/wu.weifeng8098/viz/Sales_17353041691490/SalesDashboard",
     category: "visualization",
     description: "Dynamic and interactive charts for exploring complex datasets."
   },
   {
-    id: 5,
+    id: 3,
     title: "Time Series Analysis",
-    image: "/time-series-analysis.jpg", // Update with your image path
-    link: "#",
+    image: "/HK-IN-NUMBERS.png", // Update with your image path
+    link: "https://public.tableau.com/app/profile/wu.weifeng8098/viz/HongKong_17356702320700/Dashboard1",
     category: "visualization",
-    description: "Visualization of temporal data patterns and seasonality."
-  },
-  {
-    id: 6,
-    title: "Market Trend Visualization",
-    image: "/market-trend-visualization.jpg", // Update with your image path
-    link: "#",
-    category: "visualization",
-    description: "Visual representation of market trends and competitive landscape."
+    description: "A look at the key statistics that make up the diverse city of Hong Kong."
   }
 ]
 
@@ -81,7 +57,7 @@ export function Projects() {
 
       <section id="data-visualization" className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-red-900">
-          Data Visualization
+          Data Viz
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {projects
